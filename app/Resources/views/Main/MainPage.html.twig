@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        {% block title %}
+            Main Page
+        {% endblock %}
+    </title>
+    <style>
+        {% block stylesheets %}
+        html{font-family: "Arial Black", serif ;}
+        body{background: url(background.jpg) repeat;}
+        .logo{margin-left:10px;height:250px;width: 250px;}
+        .Header{margin-top:5px;border-radius: 10px;background: url(grey-background.jpg) repeat;height:238px;}
+        .Menu{margin-left:320px;margin-right: 150px;margin-top:-200px;width:auto;}
+        .MenuLi{display:inline;border:1px solid white;border-radius: 2px;font-size:30px;margin-top:6px;padding:10px;}
+        ul a{text-decoration: none;color:white;}
+        .MenuLi:hover{background-color: #259eff;}
+        .LoginButton{color:white;margin-left:1050px;margin-top:-60px;font-size:40px;}
+        .LoginButton a{color:white;}
+        .Login:hover{color:#6b9311;}
+        .Content{margin-left:60px;margin-right:500px;color:white;font-family: "Calibri Light", serif}
+        .Properties{position: absolute;width: fit-content;top:250px;right:100px;color:white;border:1px solid white;padding:10px;}
+        .listQuizLi{list-style-type:circle;font-size:20px;}
+        .PropertiesName{font-size:30px;}
+        .startGame{float:right;margin-top:220px;margin-right:180px;background-color: #6b9311;width: 200px;height:200px;border-radius: 50%; }
+        .startGame:hover{background-color: lawngreen;cursor: pointer}
+        .ButtVic{margin-left:18px;margin-top:46px;text-decoration: none;font-size:60px;color:white;}
+        {% endblock %}
+    </style>
+</head>
+<body>
+{% block body %}
+    <div class="Header">
+        <img class="logo" src="{{ asset('logo.png') }}" alt="iQuiz">
+        <ul class="Menu">
+            <li class="MenuLi"><a href="http://stilltrying/web/" class="MainPage">Main Page</a></li>
+            <li class="MenuLi"><a href="http://stilltrying/web/Rules" class="Rules">Rules</a></li>
+            <li class="MenuLi"><a href="#" class="Ratings">Ratings</a></li>
+            <li class="MenuLi"><a href="http://stilltrying/web/Contacts" class="Contacts">Contacts</a></li>
+        </ul>
+        <div class="LoginButton">
+            <a href="http://stilltrying/web/SignUp" class="Login">Log in</a>
+        </div>
+    </div>
+    <div class="Content">
+        <p>
+            УРАААА!!! Это случилось! Самая крутая, современная и красивая викторина iQuiz открывается!
+            Мы(Николай и Александр) работали не покладая рук, не спали ночами, не спали даже днями, и вот наконец сделали это.
+            В нашей викторине столько функционала, сколько вам и не снилось...
+        <P>ДОБРО ПОЖАЛОВАТЬ, МЫ ВАМ ОЧЕНЬ РАДЫ!</P>
+        </p>
+    </div>
+    <div class="Properties">
+        <p class="PropertiesName">iQuiz викторина:</p>
+        <ul class="listQuiz">
+            <li class="listQuizLi">Яркая</li>
+            <li class="listQuizLi">Интересная</li>
+            <li class="listQuizLi">Увлекательная</li>
+            <li class="listQuizLi">Инновационная</li>
+            <li class="listQuizLi">Современная</li>
+            <li class="listQuizLi">Интеллектуальная</li>
+        </ul>
+    </div>
+    <a href="#">
+        <div class="startGame" >
+            <p class="ButtVic"> Start</p>
+        </div>
+    </a>
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}
+</body>
+</html>

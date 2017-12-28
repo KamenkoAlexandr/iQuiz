@@ -1,0 +1,54 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        {% block title %}
+            Sign up iQuiz
+        {% endblock %}
+    </title>
+    <style>
+        {% block stylesheets %}
+        html{font-family: "Arial Black", serif ;color:white;}
+        body{background: url(grey-background.jpg) repeat;}
+        .Form{background: url(background.jpg) repeat;padding: 50px; box-shadow: 0 0 20px rgba(0,0,0,2);
+            position: fixed; top: 40%; left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);background-color: #5f5930;}
+        .FormName{}
+        #LoginForm{}
+        .HomePageLink{float:left; padding-right:30px;padding-bottom:30px;}
+        .HomePageLink a{color:white;}
+        .back{width:100px;height:100px;border-radius: 50%}
+        .back:hover{background-color: #6b9311;}
+        .user a{color:white;}
+        .user a:hover{color: #647e87;}
+        {% endblock %}
+    </style>
+</head>
+<body>
+{% block body %}
+    {{ form_start(form) }}
+    <div class="Form">
+        <h2 class="FormName">Sign up</h2>
+        <form id="LoginForm">            <p><label for="UserName">Login:</label></p>
+            {{ form_widget(form.UserName) }}
+            <p><label for="Email">Email:</label></p>
+            {{ form_widget(form.Email) }}
+            <p><label for="Password" >Password:</label></p>
+            {{ form_widget(form.Password) }}
+            {{ form_widget(form.save) }}
+        </form>
+        <div class="User">
+            <p>If you have already created an account, just <a href="http://stilltrying/web/SignIn">sign in.</a></p>
+        </div>
+    </div>
+
+    {{ form_end(form) }}
+    <div class="HomePageLink"><a href="http://stilltrying/web/"> <img src="{{ asset('back.png') }}" alt="back" class="back"> </a></div>
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        {% block title %}
+            Contacts
+        {% endblock %}
+    </title>
+    <style>
+        {% block stylesheets %}
+        html{font-family: "Arial Black", serif ;}
+        body{background: url(background.jpg) repeat;}
+        .logo{margin-left:10px;height:250px;width: 250px;}
+        .Header{margin-top:5px;border-radius: 10px;background: url(grey-background.jpg) repeat;height:238px;}
+        .Menu{margin-left:320px;margin-right: 150px;margin-top:-200px;width:auto;}
+        .MenuLi{display:inline;border:1px solid white;border-radius: 2px;font-size:30px;margin-top:6px;padding:10px;}
+        ul a{text-decoration: none;color:white;}
+        .MenuLi:hover{background-color: #259eff;}
+        .LoginButton{color:white;margin-left:1050px;margin-top:-60px;font-size:40px;}
+        .LoginButton a{color:white;}
+        .Login:hover{color:#6b9311;}
+        .Content{margin-left:60px;margin-right:60px;color:white;font-family: "Calibri Light", serif}
+        .inActive{color:grey;display:inline;border:1px solid grey;border-radius: 2px;font-size:30px;margin-top:6px;padding:10px;}
+        .InfoLi{display: inline-block;}
+        .InfoLi .Alexander{margin-left: 100px;}
+        .Nikolai h1{margin-left:137px;}
+        .Alexander h1{margin-left:130px;}
+        .NikolaiPhoto{margin-left:85px;box-shadow: 0 0 10px rgb(255, 255, 255)}
+        .AlexanderPhoto{margin-left:120px;box-shadow: 0 0 10px rgb(255, 255, 255)}
+        .Nikolai h2{margin-left:85px}
+        .Alexander h2{margin-left:120px}
+        h2 a{color:lightblue}
+        h2 a:hover{color: #6d8794}
+        {% endblock %}
+    </style>
+</head>
+<body>
+{% block body %}
+    <div class="Header">
+        <img class="logo" src="{{ asset('logo.png') }}" alt="iQuiz">
+        <ul class="Menu">
+            <li class="MenuLi"><a href="http://stilltrying/web/" class="MainPage">Main Page</a></li>
+            <li class="MenuLi"><a href="http://stilltrying/web/Rules" class="Rules">Rules</a></li>
+            <li class="MenuLi"><a href="#" class="Ratings">Ratings</a></li>
+            <li class="inActive">Contacts</li>
+        </ul>
+        <div class="LoginButton"><a href="http://stilltrying/web/SignUp" class="Login">Log in</a>
+        </div>
+    </div>
+    <div class="Content">
+        <ul class="Info">
+            <li class="InfoLi ">
+                <div class="Nikolai">
+                    <h1>Kovalyov Nikolai</h1>
+                    <h3>Programmer, Style icon 2022, Designer, Sportsman, just a good guy.</h3>
+                    <img class="NikolaiPhoto" src="{{ asset('Nikolai.png') }}" alt="Nikolai">
+                    <h2>VK: <a href="https://vk.com/id184231219">Коля Ковалев</a> </h2>
+                    <h2>Instagram: <a href="https://www.instagram.com/kovalyov.k/">kovalyov.k</a> </h2>
+                    <h2>GitHub: <a href="https://github.com/Nikkov17">Nikkov17</a> </h2>
+                </div>
+            </li>
+            <li class="InfoLi">
+                <div class="Alexander">
+                    <h1>Kamenko Alexander</h1>
+                    <h3>Man of the Year 2019 by Forbes, experimenter, Programmer, Sportsman.</h3>
+                    <img class="AlexanderPhoto" src="{{ asset('Alexander.png') }}" alt="Alexander">
+                    <h2>VK: <a href="https://vk.com/mr_mvp">Александр Каменко</a> </h2>
+                    <h2>Instagram: <a href="https://www.instagram.com/alexandr.kamenko/">alexandr.kamenko</a> </h2>
+                    <h2>GitHub: <a href="https://github.com/KamenkoAlexandr">KamenkoAlexandr</a> </h2>
+                </div>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}
+</body>
+</html>
